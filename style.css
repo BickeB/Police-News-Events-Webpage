@@ -1,0 +1,282 @@
+/* Färgvariabler, smidigt om man vill ändra färgerna från samma ställe i koden*/
+:root {
+  --default-color: white;
+  --text-color: black;
+  --eventlist-color: #f1f1f1;
+  --nav-title-color: rgb(255, 255, 104);
+  --nav-title-background: rgb(96, 96, 233);
+  --nav-item-hover-color: rgb(96, 96, 233);
+  --footer-background-color: #0c3256;
+  --footer-color: white;
+}
+
+.darkmode {
+  --default-color: #0f0f0f;
+  --text-color: white;
+  --eventlist-color: #383838;
+  --nav-title-color: rgb(96, 96, 233);
+  --nav-title-background: rgb(219, 219, 101);
+  --nav-item-hover-color: rgb(96, 96, 233);
+  --footer-background-color: #383838;
+  --footer-color: white;
+}
+
+#theme-switch {
+  height: 50px;
+  width: 50px;
+  padding: 0;
+  border-radius: 50%;
+  background-color: var(--eventlist-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 20px;
+  right: 20px;
+  position: absolute;
+  border: none;
+}
+
+#theme-switch svg:last-child {
+  display: none;
+}
+
+.darkmode #theme-switch svg:first-child {
+  display: none;
+}
+.darkmode #theme-switch svg:last-child {
+  display: block;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Satoshi", sans-serif;
+  background-color: var(--default-color);
+  color: var(--text-color);
+  width: 100%;
+  height: 100vh;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+#nav-title {
+  color: var(--nav-title-color);
+  background-color: var(--nav-title-background);
+  padding: 0.6rem;
+  border-radius: 10px;
+  font-size: 1.5rem;
+  margin-right: 22.8rem;
+  margin-bottom: 26px;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--text-color);
+  font-weight: 400;
+}
+
+nav a:hover {
+  color: var(--nav-item-hover-color);
+}
+
+.nav-item {
+  margin: 2rem;
+  font-size: 1.2rem;
+  text-wrap: nowrap;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+}
+
+#hamburger-menu {
+  display: none;
+}
+
+h1 {
+  background-color: var(--default-color);
+  color: var(--text-color);
+  font-size: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+#filter-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+#filterLocations {
+  box-shadow: 1px 1px 2px;
+  font-size: 1.2rem;
+  padding: 0.2rem;
+}
+
+#secondary-title {
+  font-size: 2rem;
+  text-align: center;
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  box-sizing: border-box;
+}
+
+#secondary-title p {
+  display: block;
+  width: auto;
+  padding-left: 100%;
+  animation: scroll 15s linear infinite;
+}
+
+/* Används för att få bättre kontroll över animationer och dess "way-points"*/
+@keyframes scroll {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-135%);
+  }
+}
+
+#event-list {
+  background-color: var(--default-color);
+  color: var(--text-color);
+  max-width: 1000px;
+  width: 100%;
+  overflow-y: auto;
+  margin: auto;
+  padding: 1rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1rem;
+  text-align: center;
+  justify-items: center;
+  align-items: center;
+}
+
+#event-list li {
+  margin: 0.5rem;
+  line-height: 1.2;
+  width: 100%;
+  background-color: var(--eventlist-color);
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 1px 1px 2px;
+  height: 10rem;
+  width: 18rem;
+  text-align: start;
+  border-top: solid 1.5px var(--nav-title-background);
+  overflow: hidden;
+}
+
+/* CSS för about.html nedan */
+
+#hero-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+#about-paragraph {
+  padding: 2rem;
+  width: 40rem;
+  background-color: var(--eventlist-color);
+  border-top: solid 1.5px var(--nav-title-background);
+  border-radius: 10px;
+  box-shadow: 1px 1px 2px;
+  text-align: start;
+}
+
+footer {
+  height: 10rem;
+  background-color: var(--footer-background-color);
+  color: var(--footer-color);
+  margin-top: 7.5rem;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-evenly;
+  text-align: center;
+}
+
+.footer-items {
+  margin-top: 1rem;
+}
+
+.titel-footer {
+  color: var(--footer-color);
+}
+
+footer a {
+  text-decoration: none;
+  color: var(--footer-color);
+}
+
+footer a:hover {
+  color: var(--nav-title-background);
+}
+
+/* Media Query */
+@media (max-width: 700px) {
+  #event-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  h1 {
+    text-align: center;
+  }
+}
+
+@media (max-width: 634px) {
+  #event-list {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  /* Hamburger menu */
+  #hamburger-menu {
+    display: block;
+    position: absolute;
+    top: 35px;
+    right: 30px;
+  }
+
+  #theme-switch {
+    position: absolute;
+    top: 20px;
+    right: 75px;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    background-color: var(--nav-title-background);
+    color: var(--nav-title-color);
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  #footer-21-nyheter {
+    display: none;
+  }
+}

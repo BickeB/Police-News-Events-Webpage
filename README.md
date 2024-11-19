@@ -1,2 +1,2 @@
 # Police News & Events
-En webbsida som hämtar polisens händelser via deras API.
+A webpage that fetches data, in this case news and events from the official website of the swedish police.

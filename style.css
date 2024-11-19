@@ -97,10 +97,6 @@ nav a:hover {
   color: var(--nav-item-hover-color);
 }
 
-.nav-links {
-  margin-left: 10.3rem;
-}
-
 .nav-item {
   margin: 2rem;
   font-size: 1.2rem;

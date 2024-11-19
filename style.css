@@ -1,25 +1,29 @@
 /* Färgvariabler, smidigt om man vill ändra färgerna från samma ställe i koden*/
 :root {
-  --default-color: white;
-  --text-color: black;
+  --default-color: #ffffff;
+  --text-color: #000000;
   --eventlist-color: #f1f1f1;
-  --nav-title-color: rgb(255, 255, 104);
-  --nav-title-background: rgb(96, 96, 233);
+  --nav-title-color: #ffff68;
+  --nav-title-background: #6060e9;
   --nav-item-hover-color: rgb(96, 96, 233);
   --footer-background-color: #0c3256;
-  --footer-color: white;
+  --footer-color: #ffffff;
+  --link-color: #0000ff;
 }
+/* Colors Validated 13/11-24 */
 
 .darkmode {
   --default-color: #0f0f0f;
-  --text-color: white;
+  --text-color: #ffffff;
   --eventlist-color: #383838;
-  --nav-title-color: rgb(96, 96, 233);
-  --nav-title-background: rgb(219, 219, 101);
-  --nav-item-hover-color: rgb(96, 96, 233);
+  --nav-title-color: #6060e9;
+  --nav-title-background: #ffff68;
+  --nav-item-hover-color: #6060e9;
   --footer-background-color: #383838;
-  --footer-color: white;
+  --footer-color: #ffffff;
+  --link-color: #ffffff;
 }
+/* Colors Validated 13/11-24 */
 
 #theme-switch {
   height: 50px;
@@ -59,6 +63,12 @@ body {
   color: var(--text-color);
   width: 100%;
   height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
 }
 
 nav {
@@ -85,6 +95,10 @@ nav a {
 
 nav a:hover {
   color: var(--nav-item-hover-color);
+}
+
+.nav-links {
+  margin-left: 10.3rem;
 }
 
 .nav-item {
@@ -116,6 +130,13 @@ h1 {
   display: flex;
   justify-content: center;
   margin-top: 2rem;
+}
+
+#input {
+  padding: 0.4rem;
+  width: 15rem;
+  border-radius: 5px;
+  border: 1px solid;
 }
 
 #filterLocations {
@@ -198,13 +219,19 @@ h1 {
   border-radius: 10px;
   box-shadow: 1px 1px 2px;
   text-align: start;
+  margin-top: 5rem;
+}
+
+/* Viktig för att färgerna på länken ska vara dynamisk */
+#about-paragraph a {
+  color: var(--link-color);
 }
 
 footer {
-  height: 10rem;
+  min-height: 10rem;
   background-color: var(--footer-background-color);
   color: var(--footer-color);
-  margin-top: 7.5rem;
+  margin-top: 3rem;
 }
 
 .footer-container {
@@ -280,3 +307,5 @@ footer a:hover {
     display: none;
   }
 }
+
+/* Validated 13/11-24 */

@@ -96,6 +96,9 @@ nav a {
 nav a:hover {
   color: var(--nav-item-hover-color);
 }
+.nav-links {
+  margin-left: 10.3rem;
+}
 
 .nav-item {
   margin: 2rem;

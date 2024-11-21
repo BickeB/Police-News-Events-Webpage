@@ -37,9 +37,23 @@ function displayEvents(events) {
     /*itererar genom händelserna och skapar listor i html. Backticks används för att kunna använda nycklarna i datat/fetchen. Man kan se dessa namn  i insomnia. Dessa listor läggs till i eventList med hjälp av appendChild() */
     latestEvents.forEach(event => {
         const listItem = document.createElement('li')
-        listItem.textContent = `${event.name}, ${event.summary}`;
+
+        const eventType = document.createElement('span')
+        eventType.textContent = `${event.type},`
+        eventType.style.fontWeight = "bold"
+        listItem.appendChild(eventType)
+
+        const eventLocation = document.createElement('span')
+        eventLocation.textContent = ` ${event.location.name} `
+        eventLocation.style.fontWeight = "bold"
+        listItem.appendChild(eventLocation)
+
+        const eventSummary = document.createElement('div')
+        eventSummary.textContent =`${event.summary}` 
+        listItem.appendChild(eventSummary)
+
         eventList.appendChild(listItem)
-    });
+    })
 }
 
 /* Funktion som visar felmeddelande */

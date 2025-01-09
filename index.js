@@ -44,12 +44,17 @@ function displayEvents(events) {
         listItem.appendChild(eventType)
 
         const eventLocation = document.createElement('span')
-        eventLocation.textContent = ` ${event.location.name} `
+        eventLocation.textContent = ` ${event.location.name}`
         eventLocation.style.fontWeight = "bold"
         listItem.appendChild(eventLocation)
 
+        const eventDateTime = document.createElement('div')
+        eventDateTime.textContent = `${event.datetime} `
+        eventDateTime.style.fontWeight = "bold"
+        listItem.appendChild(eventDateTime)
+
         const eventSummary = document.createElement('div')
-        eventSummary.textContent =`${event.summary}` 
+        eventSummary.textContent = `${event.summary}`
         listItem.appendChild(eventSummary)
 
         eventList.appendChild(listItem)

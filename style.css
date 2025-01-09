@@ -96,9 +96,6 @@ nav a {
 nav a:hover {
   color: var(--nav-item-hover-color);
 }
-.nav-links {
-  margin-left: 10.3rem;
-}
 
 .nav-item {
   margin: 2rem;
@@ -187,18 +184,25 @@ h1 {
 }
 
 #event-list li {
-  margin: 0.5rem;
+  margin: 1rem;
   line-height: 1.2;
   width: 100%;
+  height: 10rem;
   background-color: var(--eventlist-color);
   padding: 2rem;
   border-radius: 10px;
   box-shadow: 1px 1px 2px;
-  height: 10rem;
-  width: 18rem;
   text-align: start;
   border-top: solid 1.5px var(--nav-title-background);
-  overflow: hidden;
+ /*  overflow-y: auto;
+  scroll-behavior: smooth; */
+  word-wrap: break-word;    /* Bryt långa ord */
+  overflow-wrap: break-word;
+
+}
+
+#event-list::-webkit-scrollbar {
+  display: none;
 }
 
 /* CSS för about.html nedan */
@@ -257,7 +261,7 @@ footer a:hover {
 }
 
 /* Media Query */
-@media (max-width: 700px) {
+@media (max-width: 960px){
   #event-list {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -272,7 +276,20 @@ footer a:hover {
   #event-list {
     display: grid;
     grid-template-columns: 1fr;
+    font-size: 1.3rem;
+    overflow: scroll;
+    width: 100%;
+    max-height:1000px;
   }
+
+  #event-list li {
+    overflow: scroll;
+  }
+
+  h1{
+    font-size:2.5rem;
+  }
+
   /* Hamburger menu */
   #hamburger-menu {
     display: block;
@@ -285,6 +302,10 @@ footer a:hover {
     position: absolute;
     top: 20px;
     right: 75px;
+  }
+
+  #secondary-title {
+    font-size: 1.5rem;
   }
 
   .nav-links {

@@ -75,6 +75,7 @@ nav {
   display: flex;
   align-items: center;
   justify-content: flex-start;
+  width: 100%;
 }
 
 #nav-title {
@@ -83,7 +84,6 @@ nav {
   padding: 0.6rem;
   border-radius: 10px;
   font-size: 1.5rem;
-  margin-right: 22.8rem;
   margin-bottom: 26px;
 }
 
@@ -95,6 +95,14 @@ nav a {
 
 nav a:hover {
   color: var(--nav-item-hover-color);
+}
+
+.nav-links{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-right: 12rem;
 }
 
 .nav-item {
